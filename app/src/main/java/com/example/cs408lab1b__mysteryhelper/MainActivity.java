@@ -21,13 +21,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(view);
 
         mp = new MysteryHelper(getResources().getStringArray(R.array.fragments));
+    }
 
-        binding.helpButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                TextView t = view.getRootView().findViewById(R.id.fragmentTV);
-                t.setText(mp.getRandomFragment());
-            }
-        });
+    public void onClick(View view) {
+        binding.fragmentTV.setText(mp.getRandomFragment());
     }
 }
